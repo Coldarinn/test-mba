@@ -1,0 +1,186 @@
+.cards {
+	margin-top: 150px;
+	padding-bottom: 170px;
+	@media (max-width:$pc){
+		margin-top: 120px; 
+		padding-bottom: 140px;
+	}
+	@media (max-width:$tabletSmall){
+		margin-top: 70px;
+		padding-bottom: 100px;
+	}
+	@media (max-width:$mobile){
+		margin-top: 45px; 
+		padding-bottom: 50px;
+	}
+	&__body {
+		display: flex;
+		column-gap: 30px;
+		@media (max-width:$tabletSmall){
+			column-gap: 10px;
+		}
+		@media (max-width:$mobile){
+			display: block; 
+		}
+	}
+	&__item {
+		flex: 0 1 50%;
+		min-height: 293px;
+		position: relative;
+		&::before {
+			content:'';
+			position: absolute;
+			right: 0;
+			top: 0;
+			border-bottom-left-radius: 5px;
+			border-top: 0 solid #fff;
+			border-right: 0 solid #fff;
+			transition: 0.5s;
+		}
+		&--red {
+			background-color: #FF3535;
+			padding: 56px 0 0 70px;
+			@media (max-width:$pc) {
+				padding: 40px 0 20px 40px;
+			}
+			@media (max-width:$tabletSmall){
+				padding: 30px 15px 20px;
+			}
+			@media (max-width:$mobile){
+				margin-bottom: 20px;
+				min-height: 231px;
+			}
+			&::before{
+				background-color: #CD1800;
+				border-bottom: 0 solid #CD1800;
+				border-left: 0 solid #CD1800;
+			}
+			@media (any-hover: none){
+				&::before {
+					border-top: 21px solid #fff;
+					border-right: 21px solid #fff;
+					border-bottom: 21px solid #CD1800;
+					border-left: 21px solid #CD1800;
+					@media (max-width:$tabletSmall){
+						border-top: 13px solid #fff;
+						border-right: 13px solid #fff;
+						border-bottom: 13px solid #CD1800;
+						border-left: 13px solid #CD1800;
+					}
+				}
+			}
+			@media (any-hover: hover){
+				&:hover{
+					&::before {
+						border-top: 21px solid #fff;
+						border-right: 21px solid #fff;
+						border-bottom: 21px solid #CD1800;
+						border-left: 21px solid #CD1800;
+						@media (max-width:$tabletSmall){
+							border-top: 13px solid #fff;
+							border-right: 13px solid #fff;
+							border-bottom: 13px solid #CD1800;
+							border-left: 13px solid #CD1800;
+						}
+					}
+				}
+			}
+		}
+		&--black {
+			background-color: #2D2C2A;
+			padding: 56px 0 0 57px;
+			@media (max-width:$pc) {
+				padding: 40px 0 20px 40px;
+			}
+			@media (max-width:$tabletSmall){
+				padding: 30px 15px 20px;
+			}
+			@media (max-width:$mobile){
+				min-height: 342px;
+			}
+			&::before{
+				background-color: #000;
+				border-bottom: 0 solid #000;
+				border-left: 0 solid #000;
+			}
+			@media (any-hover: none){
+				&::before {
+					border-top: 21px solid #fff;
+					border-right: 21px solid #fff;
+					border-bottom: 21px solid #000;
+					border-left: 21px solid #000;
+					@media (max-width:$tabletSmall){
+						border-top: 13px solid #fff;
+						border-right: 13px solid #fff;
+						border-bottom: 13px solid #000;
+						border-left: 13px solid #000;
+					}
+				}
+			}
+			@media (any-hover: hover) {
+				&:hover{
+					&::before {
+						border-top: 21px solid #fff;
+						border-right: 21px solid #fff;
+						border-bottom: 21px solid #000;
+						border-left: 21px solid #000;
+						@media (max-width:$tabletSmall){
+							border-top: 13px solid #fff;
+							border-right: 13px solid #fff;
+							border-bottom: 13px solid #000;
+							border-left: 13px solid #000;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		color: #fff;
+		margin-bottom: 25px;
+		@media (max-width:$pc){
+			font-size: 32px; 
+		}
+		@media (max-width:$tabletSmall){
+			font-size: 25px;
+		}
+	}
+	&__text {
+		font-size: 20px;
+		line-height: 130%;
+		color: #FFFFFF;
+		max-width: 410px;
+		@media (max-width:$tabletSmall){
+			max-width: 100%;
+		}
+	}
+	&__list {
+		max-width: 500px;
+		@media (max-width:$tabletSmall){
+			max-width: 100%;
+		}
+	}
+	&__point {
+		font-size: 20px;
+		line-height: 130%;
+		color: #FFFFFF;
+		padding-left: 20px;
+		position: relative;
+		&::before{
+			content:'';
+			display: block;
+			width: 5px;
+			height: 5px;
+			background-color: #FF3535;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 8px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.section {
+	&:not(:last-child) {
+		margin-bottom: 72px;
+		@media (max-width:$tablet){
+			margin-bottom: 55px;
+		}
+		@media (max-width:$mobile){
+			margin-bottom: 35px; 
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 26px;
+		margin-bottom: 55px;
+		@media (max-width:$tabletSmall){
+			font-size: 22px;
+			margin-bottom: 30px;
+		}
+	}
+	&__body {
+		display: flex;
+		column-gap: 45px;
+		@media (max-width:$tabletSmall){
+			column-gap: 20px;
+		}
+		@media (max-width:$mobile){
+			display: block; 
+		}
+	}
+}
